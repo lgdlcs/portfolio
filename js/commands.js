@@ -1,0 +1,81 @@
+const COMMANDS = {
+    help: () => [
+        { text: 'Available commands:', cls: 'accent' },
+        { text: '' },
+        { text: '  help        Show this message' },
+        { text: '  about       Who am I' },
+        { text: '  projects    Things I\'ve built' },
+        { text: '  stack       Tech I use' },
+        { text: '  contact     Get in touch' },
+        { text: '  clear       Clear the terminal' },
+        { text: '  secret      🤫' },
+        { text: '' },
+        { text: 'Tip: use ↑/↓ for history, Tab for autocomplete', cls: 'dim' },
+    ],
+
+    about: () => [
+        { text: 'Lucas Legrand — Developer & builder.', cls: 'accent' },
+        { text: '' },
+        { text: 'Based in France, near Annecy (French Alps).' },
+        { text: 'Building side projects, shipping fast, learning by doing.' },
+        { text: 'Currently exploring mobile apps, web platforms, and AI tooling.' },
+    ],
+
+    projects: () => [
+        { text: 'Projects (2026)', cls: 'accent' },
+        { text: '' },
+        { text: '🎬 snipvid        — Auto photo-to-video editor for events', link: 'https://github.com/Pouetpouets/snipvid' },
+        { text: '🎿 ski-platform   — Ski resort conditions & weather aggregator', link: 'https://github.com/Pouetpouets/ski-platform' },
+        { text: '🥙 meat-grill     — Restaurant showcase website', link: 'https://github.com/Pouetpouets/meat-grill' },
+        { text: '📰 limedia        — Media content platform (WIP)', link: 'https://github.com/Pouetpouets/limedia' },
+        { text: '🎮 videoGame      — Game project (WIP)', link: 'https://github.com/Pouetpouets/videoGame' },
+        { text: '🛤️  ThePath        — Personal project (WIP)', link: 'https://github.com/Pouetpouets/ThePath' },
+    ],
+
+    stack: () => [
+        { text: 'Tech Stack', cls: 'accent' },
+        { text: '' },
+        { text: 'Frontend    → Next.js, React, Tailwind CSS, TypeScript' },
+        { text: 'Mobile      → Flutter, Dart' },
+        { text: 'Backend     → Cloudflare Workers, Supabase, Firebase' },
+        { text: 'Tools       → Git, VS Code, Vercel, GitHub Actions' },
+        { text: 'AI          → OpenClaw, Claude' },
+    ],
+
+    contact: () => [
+        { text: 'Contact', cls: 'accent' },
+        { text: '' },
+        { text: 'GitHub      → github.com/Pouetpouets', link: 'https://github.com/Pouetpouets' },
+        { text: 'Email       → legrand.lucas0@gmail.com', link: 'mailto:legrand.lucas0@gmail.com' },
+    ],
+
+    secret: () => [
+        { text: 'Try typing the name of a classic game... 🐍', cls: 'dim' },
+    ],
+
+    ls: () => [
+        { text: 'about.txt    projects.md    stack.json    contact.txt', cls: 'dim' },
+    ],
+
+    sudo: () => [
+        { text: 'Nice try 😏' },
+    ],
+
+    'rm -rf /': () => [
+        { text: 'Not on my watch 🛡️' },
+    ],
+
+    whoami: () => [
+        { text: 'visitor' },
+    ],
+
+    date: () => [
+        { text: new Date().toString() },
+    ],
+
+    echo: (args) => [
+        { text: args || '' },
+    ],
+};
+
+const COMMAND_NAMES = Object.keys(COMMANDS).filter(c => c !== 'rm -rf /');

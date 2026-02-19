@@ -1,0 +1,91 @@
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --bg: #0a0a0a;
+    --text: #e4e4e7;
+    --dim: #71717a;
+    --accent: #6366f1;
+    --green: #4ade80;
+    --font: 'JetBrains Mono', monospace;
+}
+
+html, body {
+    height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+#terminal {
+    min-height: 100vh;
+    padding: 24px;
+    padding-bottom: 120px;
+    cursor: text;
+}
+
+#output .line { white-space: pre-wrap; word-break: break-word; }
+#output .line.dim { color: var(--dim); }
+#output .line.accent { color: var(--accent); }
+#output .line.green { color: var(--green); }
+#output .line a { color: var(--accent); text-decoration: none; }
+#output .line a:hover { text-decoration: underline; }
+
+#input-line {
+    display: flex;
+    align-items: center;
+}
+
+.prompt {
+    color: var(--green);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+#input {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--text);
+    font-family: var(--font);
+    font-size: 14px;
+    caret-color: var(--text);
+    line-height: 1.6;
+}
+
+/* Command echo lines */
+.cmd-echo .prompt-echo { color: var(--green); }
+.cmd-echo .cmd-text { color: var(--text); }
+
+/* Snake */
+#snake-canvas {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid var(--dim);
+    background: var(--bg);
+    z-index: 100;
+}
+
+/* Matrix */
+#matrix-canvas {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 200;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    #terminal { padding: 12px; }
+    html, body { font-size: 12px; }
+}
+
+/* Blinking cursor simulation via caret */
+@keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }

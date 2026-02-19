@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Legrand — Terminal</title>
+    <meta name="description" content="Lucas Legrand — Developer & builder. Portfolio terminal.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="terminal">
+        <div id="output"></div>
+        <div id="input-line">
+            <span class="prompt">visitor@lld ~ $&nbsp;</span>
+            <input type="text" id="input" autocomplete="off" autocapitalize="off" spellcheck="false" autofocus>
+        </div>
+    </div>
+    <canvas id="snake-canvas"></canvas>
+    <canvas id="matrix-canvas"></canvas>
+    <script src="js/commands.js"></script>
+    <script src="js/snake.js"></script>
+    <script src="js/terminal.js"></script>
+</body>
+</html>
