@@ -16,6 +16,53 @@ html, body {
     font-family: var(--font);
     font-size: 14px;
     line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Animated dot grid background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: radial-gradient(circle, rgba(99, 102, 241, 0.15) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+    animation: gridDrift 20s linear infinite;
+}
+
+/* Floating indigo glow */
+body::after {
+    content: '';
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 0;
+    animation: glowPulse 8s ease-in-out infinite, glowDrift 15s ease-in-out infinite;
+}
+
+@keyframes gridDrift {
+    0% { background-position: 0 0; }
+    100% { background-position: 40px 40px; }
+}
+
+@keyframes glowPulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+@keyframes glowDrift {
+    0%, 100% { top: 30%; left: 50%; }
+    25% { top: 40%; left: 55%; }
+    50% { top: 35%; left: 45%; }
+    75% { top: 25%; left: 50%; }
 }
 
 #terminal {
@@ -23,6 +70,8 @@ html, body {
     padding: 24px;
     padding-bottom: 120px;
     cursor: text;
+    position: relative;
+    z-index: 1;
 }
 
 #output .line { white-space: pre-wrap; word-break: break-word; }
