@@ -14,7 +14,7 @@ const COMMANDS = {
     ],
 
     about: () => [
-        { text: 'Lucas Legrand — Developer & builder.', cls: 'accent' },
+        { text: 'Lucas \'LLD\' Legrand — Developer & builder.', cls: 'accent' },
         { text: '' },
         { text: 'Based in France, near Annecy (French Alps).' },
         { text: 'Building side projects, shipping fast, learning by doing.' },
@@ -50,7 +50,19 @@ const COMMANDS = {
     ],
 
     secret: () => [
-        { text: 'Try typing the name of a classic game... 🐍', cls: 'dim' },
+        { text: '// Gaming stats — don\'t judge me', cls: 'dim' },
+        { text: '' },
+        { text: '🎮 Player profile', cls: 'accent' },
+        { text: '' },
+        { text: '  World of Warcraft   Since Burning Crusade (2007)' },
+        { text: '  /played             ~365 days. Yes, days.', cls: 'dim' },
+        { text: '' },
+        { text: '  League of Legends   Since Season 2 (2012)' },
+        { text: '  Hours played        ~5000h. No regrets.', cls: 'dim' },
+        { text: '' },
+        { text: '  Total time gaming   Enough to have built 10 startups 🫠' },
+        { text: '' },
+        { text: 'Psst... try typing the name of a classic game 🐍', cls: 'dim' },
     ],
 
     ls: () => [
