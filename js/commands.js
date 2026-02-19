@@ -24,12 +24,12 @@ const COMMANDS = {
     projects: () => [
         { text: 'Projects (2026)', cls: 'accent' },
         { text: '' },
-        { text: '🎬 snipvid        — Auto photo-to-video editor for events', link: 'https://github.com/Pouetpouets/snipvid' },
-        { text: '🎿 ski-platform   — Ski resort conditions & weather aggregator', link: 'https://github.com/Pouetpouets/ski-platform' },
-        { text: '🥙 meat-grill     — Restaurant showcase website', link: 'https://github.com/Pouetpouets/meat-grill' },
-        { text: '📰 limedia        — Media content platform (WIP)', link: 'https://github.com/Pouetpouets/limedia' },
-        { text: '🎮 videoGame      — Game project (WIP)', link: 'https://github.com/Pouetpouets/videoGame' },
-        { text: '🛤️  ThePath        — Personal project (WIP)', link: 'https://github.com/Pouetpouets/ThePath' },
+        { text: '🎬 snipvid        — Auto photo-to-video editor for events', link: 'https://github.com/lgdlcs/snipvid' },
+        { text: '🎿 ski-platform   — Ski resort conditions & weather aggregator', link: 'https://github.com/lgdlcs/ski-platform' },
+        { text: '🥙 meat-grill     — Restaurant showcase website', link: 'https://github.com/lgdlcs/meat-grill' },
+        { text: '📰 limedia        — Media content platform (WIP)', link: 'https://github.com/lgdlcs/limedia' },
+        { text: '🎮 videoGame      — Game project (WIP)', link: 'https://github.com/lgdlcs/videoGame' },
+        { text: '🛤️  ThePath        — Personal project (WIP)', link: 'https://github.com/lgdlcs/ThePath' },
     ],
 
     stack: () => [
@@ -45,7 +45,7 @@ const COMMANDS = {
     contact: () => [
         { text: 'Contact', cls: 'accent' },
         { text: '' },
-        { text: 'GitHub      → github.com/Pouetpouets', link: 'https://github.com/Pouetpouets' },
+        { text: 'GitHub      → github.com/lgdlcs', link: 'https://github.com/lgdlcs' },
         { text: 'Email       → legrand.lucas0@gmail.com', link: 'mailto:legrand.lucas0@gmail.com' },
     ],
 
