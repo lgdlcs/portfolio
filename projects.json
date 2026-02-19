@@ -2,6 +2,7 @@
   { "id": "snipvid", "emoji": "🎬", "desc": "Auto photo-to-video editor for events", "featured": true },
   { "id": "ski-platform", "emoji": "🎿", "desc": "Ski resort conditions & weather aggregator", "featured": true },
   { "id": "meat-grill", "emoji": "🥙", "desc": "Restaurant showcase website", "featured": true },
+  { "id": "aero-bi", "emoji": "🪂", "desc": "Paragliding & speed riding school website", "featured": true },
   { "id": "limedia", "emoji": "📰", "desc": "Media content platform (WIP)", "featured": false },
   { "id": "videoGame", "emoji": "🎮", "desc": "Game project (WIP)", "featured": false },
   { "id": "ThePath", "emoji": "🛤️", "desc": "Personal project (WIP)", "featured": false }
