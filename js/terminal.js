@@ -24,7 +24,7 @@
     function printCommand(cmd) {
         const div = document.createElement('div');
         div.className = 'line cmd-echo';
-        div.innerHTML = `<span class="prompt-echo">visitor@lld ~ $&nbsp;</span><span class="cmd-text">${escapeHtml(cmd)}</span>`;
+        div.innerHTML = `<span class="prompt-echo">visitor@lgdlcs ~ $&nbsp;</span><span class="cmd-text">${escapeHtml(cmd)}</span>`;
         output.appendChild(div);
     }
 
