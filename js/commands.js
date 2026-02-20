@@ -27,6 +27,7 @@ const COMMANDS = {
         { text: '🎬 snipvid        — Auto photo-to-video editor for events', link: 'https://github.com/lgdlcs/snipvid' },
         { text: '🎿 ski-platform   — Ski resort conditions & weather aggregator', link: 'https://github.com/lgdlcs/ski-platform' },
         { text: '🥙 meat-grill     — Restaurant showcase website', link: 'https://github.com/lgdlcs/meat-grill' },
+        { text: '🪂 aero-bi        — Paragliding & speed riding school website', link: 'https://github.com/lgdlcs/aero-bi' },
         { text: '📰 limedia        — Media content platform (WIP)', link: 'https://github.com/lgdlcs/limedia' },
         { text: '🎮 videoGame      — Game project (WIP)', link: 'https://github.com/lgdlcs/videoGame' },
         { text: '🛤️  ThePath        — Personal project (WIP)', link: 'https://github.com/lgdlcs/ThePath' },
