@@ -30,7 +30,6 @@ const COMMANDS = {
         { text: '🪂 aero-bi        — Paragliding & speed riding school website', link: 'https://github.com/lgdlcs/aero-bi' },
         { text: '📰 limedia        — Media content platform (WIP)', link: 'https://github.com/lgdlcs/limedia' },
         { text: '🎮 videoGame      — Game project (WIP)', link: 'https://github.com/lgdlcs/videoGame' },
-        { text: '🛤️  ThePath        — Personal project (WIP)', link: 'https://github.com/lgdlcs/ThePath' },
     ],
 
     stack: () => [
