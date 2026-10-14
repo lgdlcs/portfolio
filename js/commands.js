@@ -106,3 +106,14 @@ const COMMANDS = {
 };
 
 const COMMAND_NAMES = Object.keys(COMMANDS).filter(c => c !== 'rm -rf /');
+
+// Shown by the Claude Code style spinner before each answer
+const THINKING_WORDS = [
+    'Vibecoding', 'Prompt-whispering', 'Yak-shaving', 'Bikeshedding', 'Hallucinating responsibly',
+    'Rubber-ducking', 'Spaghettifying', 'Centering a div', 'Negotiating with CSS', 'Deploying on a Friday',
+    'Blaming the cache', 'Reticulating splines', 'Rewriting it in Rust', 'Grepping the void', 'Compiling excuses',
+    'Herding subagents', 'Burning tokens', 'Stuffing the context window', 'Summoning Opus', 'Ignoring the linter',
+    'Reading the docs (lol)', 'Mansplaining regex', 'Overengineering', 'Waking up the hamsters', 'Shipping it anyway',
+    'Carb-loading', 'Hitting the wall at km 30', 'Chasing a sub-3h45', 'Chalking up', 'Clipping in',
+    'Swimming in logs', 'Changing a diaper', 'Negotiating nap time', 'Running on 4h of sleep', 'Ricing Omarchy',
+];

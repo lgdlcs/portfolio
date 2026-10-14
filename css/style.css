@@ -104,6 +104,11 @@ body::after {
     line-height: 1.6;
 }
 
+/* Claude Code style thinking spinner */
+#output .line.thinking { color: #d97757; }
+#output .line.thinking .spinner { display: inline-block; width: 1ch; }
+#output .line.thinking .dim { color: var(--dim); }
+
 /* Command echo lines */
 .cmd-echo .prompt-echo { color: var(--green); }
 .cmd-echo .cmd-text { color: var(--text); }

@@ -36,21 +36,60 @@
         window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     }
 
+    // Claude Code style "thinking" spinner shown before each answer
+    const SPINNER = ['·', '✢', '✳', '✶', '✻', '✽', '✻', '✶', '✳', '✢'];
+    let thinking = null;
+
+    function think(done) {
+        const word = THINKING_WORDS[Math.floor(Math.random() * THINKING_WORDS.length)];
+        const duration = 600 + Math.random() * 900;
+        const start = performance.now();
+        const div = document.createElement('div');
+        div.className = 'line thinking';
+        output.appendChild(div);
+        scrollBottom();
+
+        let frame = 0;
+        const render = () => {
+            const secs = ((performance.now() - start) / 1000).toFixed(1);
+            div.innerHTML = `<span class="spinner">${SPINNER[frame++ % SPINNER.length]}</span> ${word}… <span class="dim">(${secs}s · esc to interrupt)</span>`;
+        };
+        render();
+        const timer = setInterval(render, 120);
+
+        const finish = (interrupted) => {
+            clearInterval(timer);
+            clearTimeout(timeout);
+            thinking = null;
+            const secs = ((performance.now() - start) / 1000).toFixed(1);
+            div.className = 'line dim';
+            div.textContent = interrupted ? '⎿  Interrupted by user. Rude.' : `✻ ${word}… done in ${secs}s`;
+            if (!interrupted) done();
+            scrollBottom();
+        };
+        const timeout = setTimeout(() => finish(false), duration);
+        thinking = { interrupt: () => finish(true) };
+    }
+
     function execute(raw) {
         const trimmed = raw.trim();
-        if (!trimmed) return;
+        if (!trimmed || thinking) return;
 
         printCommand(trimmed);
         history.unshift(trimmed);
         histIdx = -1;
 
-        const lower = trimmed.toLowerCase();
-
         // special: clear
-        if (lower === 'clear') {
+        if (trimmed.toLowerCase() === 'clear') {
             output.innerHTML = '';
             return;
         }
+
+        think(() => run(trimmed));
+    }
+
+    function run(trimmed) {
+        const lower = trimmed.toLowerCase();
 
         // special: rm -rf /
         if (lower === 'rm -rf /' || lower === 'rm -rf / --no-preserve-root') {
@@ -157,6 +196,7 @@
             if (histIdx > 0) { histIdx--; input.value = history[histIdx]; }
             else { histIdx = -1; input.value = ''; }
         }
+        if (e.key === 'Escape' && thinking) thinking.interrupt();
         if (e.key === 'Enter') {
             const val = input.value;
             input.value = '';
@@ -181,8 +221,6 @@
     }
 
     // Welcome
-    COMMANDS.avatar().forEach(l => printLine(l.text, l.cls));
-    printLine('');
     printLine('Welcome to LgdLcs\'s terminal portfolio.', 'accent');
     printLine('Type a command or just explore. Tab to autocomplete.', 'dim');
     printLine('');
