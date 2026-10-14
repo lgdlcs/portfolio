@@ -181,7 +181,9 @@
     }
 
     // Welcome
-    printLine('Welcome to Lucas Legrand\'s terminal portfolio.', 'accent');
+    COMMANDS.avatar().forEach(l => printLine(l.text, l.cls));
+    printLine('');
+    printLine('Welcome to LgdLcs\'s terminal portfolio.', 'accent');
     printLine('Type a command or just explore. Tab to autocomplete.', 'dim');
     printLine('');
     setTimeout(() => autoType('help', 0), 600);
