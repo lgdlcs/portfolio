@@ -13,11 +13,12 @@ echo "📦 Reading projects.json..."
 
 # --- Update portfolio commands.js ---
 PROJ_LINES=""
+ID_WIDTH=$(jq '[.[].id | length] | max + 1' "$PROJECTS_FILE")
 while IFS= read -r line; do
   emoji=$(echo "$line" | jq -r '.emoji')
   id=$(echo "$line" | jq -r '.id')
   desc=$(echo "$line" | jq -r '.desc')
-  padded=$(printf "%-14s" "$id")
+  padded=$(printf "%-${ID_WIDTH}s" "$id")
   PROJ_LINES+="        { text: '$emoji $padded— $desc', link: 'https://github.com/$GITHUB_USER/$id' },\n"
 done < <(jq -c '.[]' "$PROJECTS_FILE")
 
@@ -59,10 +60,10 @@ $(echo -e "$FEATURED")
 #### Stack
 
 \`\`\`
-Frontend    → Next.js · React · Tailwind · TypeScript
-Mobile      → Flutter · Dart
-Backend     → Cloudflare Workers · Supabase · Firebase
-Tools       → Git · VS Code · Vercel · GitHub Actions
+Frontend    → Bro do you even read code ?
+Backend     → Bro do you even read code ?
+Tools       → Git · Omarchy
+AI          → OpenClaw · Claude Code · personal harness · status line
 \`\`\`
 
 #### Find me
