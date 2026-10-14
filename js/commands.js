@@ -20,6 +20,13 @@ const COMMANDS = {
         { text: 'Based in France, near Annecy (French Alps).' },
         { text: 'Building side projects, shipping fast, learning by doing.' },
         { text: 'Currently exploring mobile apps, web platforms, and AI tooling.' },
+        { text: '' },
+        { text: 'Sport', cls: 'accent' },
+        { text: '  🏃 Running     4 marathons, PB 3h45 in Paris. ~1000 km a year.' },
+        { text: '  🧗 Also        Climbing, swimming, cycling.' },
+        { text: '' },
+        { text: 'Family', cls: 'accent' },
+        { text: '  👶 Dad since 2026 of a wonderful little girl.' },
     ],
 
     projects: () => [
