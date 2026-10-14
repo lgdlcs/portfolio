@@ -2,13 +2,9 @@
   { "id": "carte-incendies", "emoji": "🔥", "desc": "Real-time wildfire map of France: satellites, winds, forecasts", "featured": true },
   { "id": "my-claudecode-terminal-setup", "emoji": "🧰", "desc": "Claude Code terminal touches: tab color, sound, statusline", "featured": true },
   { "id": "agent-ship-fast", "emoji": "🤖", "desc": "Ship a SaaS on Stripe in minutes, driven by your AI agent", "featured": true },
-  { "id": "ski-platform", "emoji": "🎿", "desc": "Perfect Day Score: ski resort picks for the French Alps", "featured": true },
   { "id": "cosmic-td", "emoji": "🚀", "desc": "Auto-chess × tower defense in space, multiplayer browser game", "featured": false },
   { "id": "element-td-3d", "emoji": "🗼", "desc": "3D elemental tower defense (WIP)", "featured": false },
   { "id": "alttab-components", "emoji": "🧩", "desc": "Vanilla scroll-driven web components gallery", "featured": false },
-  { "id": "complaintscout", "emoji": "🕵️", "desc": "Find the people already asking for your product", "featured": false },
   { "id": "bravefable", "emoji": "⚔️", "desc": "Bravefable landing page", "featured": false },
-  { "id": "snipvid", "emoji": "🎬", "desc": "Auto photo-to-video editor for events", "featured": false },
-  { "id": "aero-bi", "emoji": "🪂", "desc": "Paragliding & speed riding school website", "featured": false },
-  { "id": "meat-grill", "emoji": "🥙", "desc": "Restaurant showcase website", "featured": false }
+  { "id": "aero-bi", "emoji": "🪂", "desc": "Paragliding & speed riding school website", "featured": false }
 ]

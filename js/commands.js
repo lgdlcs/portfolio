@@ -35,15 +35,11 @@ const COMMANDS = {
         { text: '🔥 carte-incendies              — Real-time wildfire map of France: satellites, winds, forecasts', link: 'https://github.com/lgdlcs/carte-incendies' },
         { text: '🧰 my-claudecode-terminal-setup — Claude Code terminal touches: tab color, sound, statusline', link: 'https://github.com/lgdlcs/my-claudecode-terminal-setup' },
         { text: '🤖 agent-ship-fast              — Ship a SaaS on Stripe in minutes, driven by your AI agent', link: 'https://github.com/lgdlcs/agent-ship-fast' },
-        { text: '🎿 ski-platform                 — Perfect Day Score: ski resort picks for the French Alps', link: 'https://github.com/lgdlcs/ski-platform' },
         { text: '🚀 cosmic-td                    — Auto-chess × tower defense in space, multiplayer browser game', link: 'https://github.com/lgdlcs/cosmic-td' },
         { text: '🗼 element-td-3d                — 3D elemental tower defense (WIP)', link: 'https://github.com/lgdlcs/element-td-3d' },
         { text: '🧩 alttab-components            — Vanilla scroll-driven web components gallery', link: 'https://github.com/lgdlcs/alttab-components' },
-        { text: '🕵️ complaintscout               — Find the people already asking for your product', link: 'https://github.com/lgdlcs/complaintscout' },
         { text: '⚔️ bravefable                   — Bravefable landing page', link: 'https://github.com/lgdlcs/bravefable' },
-        { text: '🎬 snipvid                      — Auto photo-to-video editor for events', link: 'https://github.com/lgdlcs/snipvid' },
         { text: '🪂 aero-bi                      — Paragliding & speed riding school website', link: 'https://github.com/lgdlcs/aero-bi' },
-        { text: '🥙 meat-grill                   — Restaurant showcase website', link: 'https://github.com/lgdlcs/meat-grill' },
     ],
 
     stack: () => [
